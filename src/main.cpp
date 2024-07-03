@@ -3,7 +3,7 @@
 
 bool executeScript(std_srvs::Trigger::Request &req, std_srvs::Trigger::Response &res)
 {
-    int result = system("bash /home/octobotics/control_logic.sh &");
+    int result = system("bash ~/catkin_ws/src/bt_launcher/control_logic.sh &");
 
     if (result == 0) {
         res.success = true;
